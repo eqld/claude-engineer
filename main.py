@@ -359,8 +359,8 @@ Available tools and their optimal use cases:
 5. stop_process: Stop a running process by its ID. Use this when you need to terminate a long-running process started by the execute_code tool.
 6. read_multiple_files: Read the contents of one or more existing files, supporting wildcards (e.g., '*.py') and recursive directory reading. This tool can handle single or multiple file paths, directory paths, and wildcard patterns. Use this when you need to examine or work with file contents, especially for multiple files or entire directories.
  IMPORTANT: Before using the read_multiple_files tool, always check if the files you need are already in your context (system prompt).
-    If the file contents are already available to you, use that information directly instead of calling the read_multiple_files tool.
-    Only use the read_multiple_files tool for files that are not already in your context.
+    If the file contents are already available to you and are up to date, use that information directly instead of calling the read_multiple_files tool.
+    Only use the read_multiple_files tool for files that are not already in your context, or if their content in your context is out of date, or if the user clearly asked you to read the files.
 7. list_files: List all files and directories in a specified folder.
 8. list_files_recursively: List all files and directories in a specified folder recursively (including all nested subdirectories). The results include relative paths to the files and directories. This tool is useful to explore the whole project scructure, or the whole structire of a specific module or part of the project.
 9. tavily_search: Perform a web search using the Tavily API for up-to-date information.
